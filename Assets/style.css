@@ -11,6 +11,10 @@ h2 {
     text-align: end;
 }
 
+a {
+    color: bisque;
+}
+
 body {
     background-color: salmon;
 }
@@ -48,6 +52,10 @@ main {
     color: brown;
 }
 
+main a {
+    color: salmon;
+}
+
 /* card-left and card-right are the child elements of the main parent element. */
 .card-left {
     padding: 10px;
@@ -76,6 +84,19 @@ main {
     text-align: center;
 }
 
+/* This id creates a card to display a project. Since we have only completed one other challenge so far, I only have one work card. */
+#work-card img {
+    border-style: inset;
+    border-color: firebrick;
+    max-width: 500px;
+    height: auto;
+}
+
+/* This makes it so that the image of the application glows when the user's mouse hovers over it. */
+#work-card img:hover {
+    box-shadow: inset 0px 0px 10px firebrick, 0px 0px 20px firebrick;
+}
+
 /* The rest of this file contains adjustments for smaller screen displays (mobile-friendly). */
 @media screen and (max-width: 768px) {
     h2 {
@@ -90,6 +111,15 @@ main {
     .card-left {
         text-align: center;
         border: none;
+    }
+    #work-card img {
+        max-width: 450px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    #work-card img {
+        max-width: 400px;
     }
   }
   
