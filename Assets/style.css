@@ -3,27 +3,23 @@
 }
 
 p {
-    font-size: 26px;
+    font-size: 22px;
 }
 
 h2 {
     font-size: 46px;
+    text-align: end;
 }
 
 body {
-    background-color: pink;
+    background-color: salmon;
 }
 
 /* header is the grid container for the heading elements. */
 header {
-    color: coral;
     display: grid;
     grid-template-columns: auto auto;
-    row-gap: 50px;
-}
-
-.header-boxes {
-    text-align: center;
+    color: firebrick;
 }
 
 header h1 {
@@ -32,26 +28,27 @@ header h1 {
 
 header ul li {
     display: inline-block;
-    margin-left: 40px;
+    margin: 40px;
 }
 
+/* I chose to use a framed profile image to keep the image of myself small and contained. */
 header img {
-    max-width: 300px;
-    margin: 30px;
+    max-width: 150px;
+    margin: 10px;
     border-style: inset;
-    border-color: fuchsia;
-    position: relative;
+    border-color: firebrick;
 }
 
 /* This is the grid container for the elements within main. */
 main {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 20% 80%;
     row-gap: 50px;
     background-color: bisque;
     color: brown;
 }
 
+/* card-left and card-right are the child elements of the main parent element. */
 .card-left {
     padding: 10px;
     text-align: right;
@@ -60,7 +57,7 @@ main {
     border-top: 0px;
     border-bottom: 0px;
     border-color: brown;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .card-right {
@@ -73,3 +70,26 @@ main {
     font-size: 30px;
     padding: 40px;
 }
+
+/* header-boxes are the child elements of the header parent element. */
+.header-boxes {
+    text-align: center;
+}
+
+/* The rest of this file contains adjustments for smaller screen displays (mobile-friendly). */
+@media screen and (max-width: 768px) {
+    h2 {
+        text-align: center;
+    }
+    header {
+        grid-template-columns: auto;
+    }
+    main {
+        grid-template-columns: 100%;
+    }
+    .card-left {
+        text-align: center;
+        border: none;
+    }
+  }
+  
