@@ -85,7 +85,7 @@ main a {
 }
 
 /* This id creates a card to display a project. Since we have only completed one other challenge so far, I only have one work card. */
-#work-card img {
+.work-card img {
     border-style: inset;
     border-color: firebrick;
     max-width: 500px;
@@ -93,7 +93,7 @@ main a {
 }
 
 /* This makes it so that the image of the application glows when the user's mouse hovers over it. */
-#work-card img:hover {
+.work-card img:hover {
     box-shadow: inset 0px 0px 10px firebrick, 0px 0px 20px firebrick;
 }
 
