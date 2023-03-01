@@ -1,125 +1,39 @@
+/* Putting in variables for color because something something optimization */
+
+:root {
+    --darkcolor: rgba(82, 22, 97, 0.952);
+    --mediumcolor: rgba(182, 53, 187, 0.938);
+    --lightcolor: rgba(243, 157, 243, 0.829);
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-    font-size: 22px;
-}
-
-h2 {
-    font-size: 46px;
-    text-align: end;
+    text-align: center;
 }
 
 a {
-    color: bisque;
+    color: var(--mediumcolor);
+    text-decoration: none;
 }
 
 body {
-    background-color: salmon;
+    background-color: var(--lightcolor);
 }
 
-/* header is the grid container for the heading elements. */
 header {
-    display: grid;
-    grid-template-columns: auto auto;
-    color: firebrick;
+    color: var(--darkcolor);
 }
 
-header h1 {
+h1 {
     font-size: 60px;
 }
 
-header ul li {
+ul li {
     display: inline-block;
     margin: 40px;
+    font-size: 30px;
 }
 
-/* I chose to use a framed profile image to keep the image of myself small and contained. */
-header img {
-    max-width: 150px;
-    margin: 10px;
-    border-style: inset;
-    border-color: firebrick;
-}
-
-/* This is the grid container for the elements within main. */
 main {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    row-gap: 50px;
-    background-color: bisque;
-    color: brown;
+    color: var(--darkcolor);
 }
-
-main a {
-    color: salmon;
-}
-
-/* card-left and card-right are the child elements of the main parent element. */
-.card-left {
-    padding: 10px;
-    text-align: right;
-    border-style: solid;
-    border-left: 10px;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-color: brown;
-    font-size: 30px;
-}
-
-.card-right {
-    padding: 10px;
-    text-align: center;
-}
-
-.card-right ul li {
-    display: inline-block;
-    font-size: 30px;
-    padding: 40px;
-}
-
-/* header-boxes are the child elements of the header parent element. */
-.header-boxes {
-    text-align: center;
-}
-
-/* This id creates a card to display a project. Since we have only completed one other challenge so far, I only have one work card. */
-.work-card img {
-    border-style: inset;
-    border-color: firebrick;
-    max-width: 500px;
-    height: auto;
-}
-
-/* This makes it so that the image of the application glows when the user's mouse hovers over it. */
-.work-card img:hover {
-    box-shadow: inset 0px 0px 10px firebrick, 0px 0px 20px firebrick;
-}
-
-/* The rest of this file contains adjustments for smaller screen displays (mobile-friendly). */
-@media screen and (max-width: 768px) {
-    h2 {
-        text-align: center;
-    }
-    header {
-        grid-template-columns: auto;
-    }
-    main {
-        grid-template-columns: 100%;
-    }
-    .card-left {
-        text-align: center;
-        border: none;
-    }
-    #work-card img {
-        max-width: 450px;
-    }
-  }
-
-@media screen and (max-width: 600px) {
-    #work-card img {
-        max-width: 400px;
-    }
-  }
-  
